@@ -15,6 +15,9 @@
 		BC81588B2A4D511A005FC3BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC81588A2A4D511A005FC3BE /* Assets.xcassets */; };
 		BC81588E2A4D511A005FC3BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC81588C2A4D511A005FC3BE /* LaunchScreen.storyboard */; };
 		BC8158912A4D511A005FC3BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8158902A4D511A005FC3BE /* main.m */; };
+		BC81589A2A4D51EE005FC3BE /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8158992A4D51EE005FC3BE /* DataHandler.m */; };
+		BC81589E2A4D530E005FC3BE /* UpgradeFileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BC81589D2A4D530E005FC3BE /* UpgradeFileParser.m */; };
+		BC8158A12A4D5392005FC3BE /* UpgradeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8158A02A4D5392005FC3BE /* UpgradeUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,13 @@
 		BC81588D2A4D511A005FC3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC81588F2A4D511A005FC3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC8158902A4D511A005FC3BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC8158982A4D51EE005FC3BE /* DataHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
+		BC8158992A4D51EE005FC3BE /* DataHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
+		BC81589B2A4D523D005FC3BE /* UpgradeCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpgradeCode.h; sourceTree = "<group>"; };
+		BC81589C2A4D530E005FC3BE /* UpgradeFileParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpgradeFileParser.h; sourceTree = "<group>"; };
+		BC81589D2A4D530E005FC3BE /* UpgradeFileParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpgradeFileParser.m; sourceTree = "<group>"; };
+		BC81589F2A4D5392005FC3BE /* UpgradeUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpgradeUtil.h; sourceTree = "<group>"; };
+		BC8158A02A4D5392005FC3BE /* UpgradeUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpgradeUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,7 @@
 		BC81587A2A4D5112005FC3BE /* cysmart_ota_update */ = {
 			isa = PBXGroup;
 			children = (
+				BC8158972A4D51B2005FC3BE /* Upgrade */,
 				BC81587B2A4D5112005FC3BE /* AppDelegate.h */,
 				BC81587C2A4D5112005FC3BE /* AppDelegate.m */,
 				BC81587E2A4D5112005FC3BE /* SceneDelegate.h */,
@@ -77,6 +88,20 @@
 				BC8158872A4D5112005FC3BE /* cysmart_ota_update.xcdatamodeld */,
 			);
 			path = cysmart_ota_update;
+			sourceTree = "<group>";
+		};
+		BC8158972A4D51B2005FC3BE /* Upgrade */ = {
+			isa = PBXGroup;
+			children = (
+				BC8158982A4D51EE005FC3BE /* DataHandler.h */,
+				BC8158992A4D51EE005FC3BE /* DataHandler.m */,
+				BC81589B2A4D523D005FC3BE /* UpgradeCode.h */,
+				BC81589C2A4D530E005FC3BE /* UpgradeFileParser.h */,
+				BC81589D2A4D530E005FC3BE /* UpgradeFileParser.m */,
+				BC81589F2A4D5392005FC3BE /* UpgradeUtil.h */,
+				BC8158A02A4D5392005FC3BE /* UpgradeUtil.m */,
+			);
+			path = Upgrade;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +178,9 @@
 				BC8158832A4D5112005FC3BE /* ViewController.m in Sources */,
 				BC81587D2A4D5112005FC3BE /* AppDelegate.m in Sources */,
 				BC8158802A4D5112005FC3BE /* SceneDelegate.m in Sources */,
+				BC81589E2A4D530E005FC3BE /* UpgradeFileParser.m in Sources */,
+				BC81589A2A4D51EE005FC3BE /* DataHandler.m in Sources */,
+				BC8158A12A4D5392005FC3BE /* UpgradeUtil.m in Sources */,
 				BC8158892A4D5112005FC3BE /* cysmart_ota_update.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +332,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +360,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
