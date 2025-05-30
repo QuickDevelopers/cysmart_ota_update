@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/QuickDevelopers/cysmart_ota_update"
   
 
-  #spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   
